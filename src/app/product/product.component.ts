@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 import {IProduct} from './Iproduct';
 
 @Component({
@@ -10,56 +11,13 @@ export class ProductComponent implements OnInit {
 
   products: IProduct[] = [];
 
-  constructor() { }
+  constructor(private data:DataService) { }
 
   ngOnInit(): void {
-    this.products = this.getProducts();
-    console.log(this.products);
+   
+    this.products = this.data.getProducts();
   }
-
-  getProducts(): IProduct[]{
-    return[
-      {
-        Id: 1,
-        Title : "Bat",
-        Price : 500,
-        ExpiryDate: "10-08-1999",
-        isInStock: true,
-        Quantity: 78
-      },
-      {
-        Id: 2,
-        Title : "Ball",
-        Price : 20,
-        ExpiryDate: "19-06-1999",
-        isInStock: true,
-        Quantity: 106
-      },
-      {
-        Id: 3,
-        Title : "Bails",
-        Price : 1500,
-        ExpiryDate: "20-01-2012",
-        isInStock: false,
-        Quantity: 99
-      },
-      {
-        Id: 4,
-        Title : "Pen",
-        Price : 1500,
-        ExpiryDate: "10-02-1999",
-        isInStock: true,
-        Quantity: 108
-      },
-      {
-        Id: 5,
-        Title : "Pencil",
-        Price : 2500,
-        ExpiryDate: "22-09-2001",
-        isInStock: false,
-        Quantity: 65
-      }
-    ]
-  }
+  searchtext:string;
+  filterprice:number;
 
 }

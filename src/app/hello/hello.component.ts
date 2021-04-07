@@ -9,7 +9,10 @@ export class HelloComponent implements OnInit {
 
   constructor() { }
 
+  color: string;
+
   ngOnInit(): void {
+    
   }
 
 }

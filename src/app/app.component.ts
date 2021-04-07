@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularTraining';
+  c:string='yellow';
   // a=100;
   // b=200;
   // setWidth():void{
@@ -26,18 +27,32 @@ export class AppComponent {
   issdvisible = false;
   showProductTable=false;
   showPurchase= false;
+  showChild1 = false;
+  showChild2  = false;
   
   showDemo():void{
     this.isbindingvisivle = true;
     this.issdvisible = false;   
     this.showProductTable=false;
     this.showPurchase = false;
+    this.showChild1 = false;
+    this.showChild2 = false;
   }
  
   showdirectiveDemoFunction(): void{
     this.isbindingvisivle= false;
     this.showProductTable=false;
     this.issdvisible = true;
+    this.showPurchase = false;
+    this.showChild1 = false;
+    this.showChild2 = false;
+  }
+  showComponents(): void{
+    this.showChild1 = true;
+    this.showChild2 = true;
+    this.isbindingvisivle= false;
+    this.showProductTable=false;
+    this.issdvisible = false;
     this.showPurchase = false;
   }
  
@@ -46,12 +61,16 @@ export class AppComponent {
     this.issdvisible = false;
     this.showProductTable = true;
     this.showPurchase = false;
+    this.showChild1 = false;
+    this.showChild2 = false;
   }
   MasterDetailsFunction(): void{
     this.isbindingvisivle= false;
     this.showProductTable=false;
     this.issdvisible = false;
     this.showPurchase = true;
+    this.showChild1 = false;
+    this.showChild2 = false;
   }
 }
 

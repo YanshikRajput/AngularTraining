@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyerrorhandelerService } from '../myerrorhandeler.service';
 
 @Component({
   selector: 'app-tshirtdatabinding',
@@ -7,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TshirtdatabindingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private handleError:MyerrorhandelerService) { }
 
   ngOnInit(): void {
   }
   title = 'Data-Binding-Demo';
-  a=100;
-  b=200;
-  setWidth():void{
-    this.a = 100;
-    this.b = 200;
-  }
+  // a=100;
+  // b=200;
+  // setWidth():void{
+  //   this.a = 100;
+  //   this.b = 200;
+  // }
   Title = 'Choose T-shirt';
   Height = 300;
   Width = 300;
@@ -27,5 +28,9 @@ export class TshirtdatabindingComponent implements OnInit {
   }
   ChangeTshirtMouseExit():void{
     this.imgSource = '../assets/front.jpg'
-}
+ }
+ generror():void{
+   this.handleError.handleError(' ');
+   
+ }
 }
