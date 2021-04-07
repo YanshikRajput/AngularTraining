@@ -21,6 +21,10 @@ import { MyerrorhandelerService } from './myerrorhandeler.service';
 import { LoginComponent } from './login/login.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { ProductsearchPipe } from './productsearch.pipe';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { BehaviourComponent } from './behaviour/behaviour.component';
+import { ReplayComponent } from './replay/replay.component';
+import { AsyncComponent } from './async/async.component';
 
 
 @NgModule({
@@ -40,6 +44,10 @@ import { ProductsearchPipe } from './productsearch.pipe';
     LoginComponent,
     CustompipePipe,
     ProductsearchPipe,
+    RxjsComponent,
+    BehaviourComponent,
+    ReplayComponent,
+    AsyncComponent,
   
   ],
   imports: [
